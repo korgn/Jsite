@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ваша сторінка</title>
+  <style>
+    body {
+      background-color: #393d4e;
+      color: #f0f0f0;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #output {
+      background-color: #2b2e3d;
+      padding: 10px;
+      color: #f0f0f0;
+      display: inline-block;
+	  border-radius: 15%;
+    }
+  </style>
+</head>
+<body>
+  <div id="output"></div>
+  <script>
+
+    let e1, e2, e3;
+
+    e1 = prompt("Введіть перший символ, він буде огранкою:");
+    e2 = prompt("Введіть другий символ, він буде самою свастикою:");
+    e3 = prompt("Введіть третій символ, він буде заповняти простір між огранкою та свастикою:");
+
+    let output = document.getElementById("output");
+
+    output.innerHTML += e1.repeat(7) + "<br>";
+    output.innerHTML += e1 + e2 + e3 + e2.repeat(3) + e1 + "<br>";
+    output.innerHTML += e1 + e2 + e3 + e2 + e3.repeat(2) + e1 + "<br>";
+    output.innerHTML += e1 + e2.repeat(5) + e1 + "<br>";
+    output.innerHTML += e1 + e3.repeat(2) + e2 + e3 + e2 + e1 + "<br>";
+    output.innerHTML += e1 + e2.repeat(3) + e3 + e2 + e1 + "<br>";
+    output.innerHTML += e1.repeat(7) + "<br>";
+  </script>
+</body>
+</html>
